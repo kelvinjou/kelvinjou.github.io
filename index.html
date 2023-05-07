@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Kelvin's Portfolio</title>
 
   <!--
     - favicon
@@ -123,25 +123,31 @@
 
         </ul>
 
-        <div class="separator"></div>
+        <div class="separator"></div>       
 
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+            <a href="https://www.github.com/kelvinjou" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.instagram.com/kelvinjou_/" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/kelvin-jou-1796a4239/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://apps.apple.com/us/app/go-serv/id1643955466" class="social-link">
+              <ion-icon name="logo-apple-appstore"></ion-icon>
             </a>
           </li>
 
@@ -226,7 +232,35 @@
             So far, this app could split any orchestra MIDI files (with multiple parts) into individual lines to display on the app. https://github.com/kelvinjou/Tunotes
           </p>
         </section>
+        
+        <section class="githubgraph">
+          <!-- Include the library. -->
+          <script
+            src="github-calendar.min.js">
+          </script>
 
+          <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+          <link
+            rel="stylesheet"
+            href="github-calendar-responsive.css"
+          />
+
+          <div class="calendar">
+              <!-- Loading stuff -->
+              Loading the data just for you.
+          </div>
+
+          <script>
+
+              // Use a proxy
+              GitHubCalendar(".calendar", "kelvinjou", {
+                proxy (username) {
+                  return fetch(`https://your-proxy.com/github?user=${username}`)
+                }
+              }).then(r => r.text())
+          </script>
+
+        </section>
 
         <!--
           - service
@@ -415,7 +449,7 @@
           - testimonials modal
         -->
 
-        <div class="modal-container" data-modal-container>
+        <!-- <div class="modal-container" data-modal-container>
 
           <div class="overlay" data-overlay></div>
 
@@ -453,7 +487,7 @@
 
           </section>
 
-        </div> 
+        </div>  -->
 
         <section class="skill">
 

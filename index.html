@@ -251,13 +251,8 @@
           </div>
 
           <script>
+            GitHubCalendar(".calendar", "kelvinjou")
 
-              // Use a proxy
-              GitHubCalendar(".calendar", "kelvinjou", {
-                proxy (username) {
-                  return fetch(`https://your-proxy.com/github?user=${username}`)
-                }
-              }).then(r => r.text())
           </script>
 
         </section>

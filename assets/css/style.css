@@ -1011,6 +1011,7 @@ main {
 
 .project-title,
 .project-category { margin-left: 10px; }
+.project-description { margin-left: 10px; }
 
 .project-title {
   color: var(--white-2);
@@ -1024,6 +1025,12 @@ main {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
+}
+
+.project-description {
+  /* font-family: Arial, sans-serif; */
+  font-size: 10px;
+  color: #666666;
 }
 
 

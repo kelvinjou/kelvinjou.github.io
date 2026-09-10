@@ -409,7 +409,7 @@
             "imageSrc": "/images/projects/XARP.gif",
             "width": 350,
             "height": 250,
-            "url": "https://github.com/HAL-UCSB/xarp",
+            "url": "https://dl.acm.org/doi/10.1145/3816762",
             "type": "XR",
             "techstack": [
                 {

@@ -443,7 +443,7 @@
             ]
         },
         {
-            "title": "Policy-Driven Contradiction Resolution for Temporal Knowledge Graphs",
+            "title": "Policy-Driven Contradiction Resolution for Temporal Knowledge Graphs (Technical Report)",
             "caption": "Policy-driven resolution of conflicting evidence in temporal knowledge graphs",
             "description": "A research project exploring policy-driven epistemic resolution for temporal knowledge graphs.",
             "imageSrc": "/images/projects/PolicyDrivenKG.png",

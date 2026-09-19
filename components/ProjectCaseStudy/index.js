@@ -16,20 +16,19 @@ const projectNotes = {
 };
 
 export default function ProjectCaseStudy({ project }) {
-  const fallback = [project.description, `Built as a ${project.type} experience using ${project.techstack?.map((item) => item.name).join(", ")}.`, project.techstack?.map((item) => `${item.name} integration`) || []];
-  const [challenge, approach, capabilities] = projectNotes[project.title] || fallback;
+  const fallback = [project.description, `Built${project.type ? ` as a ${project.type} experience` : ""}${project.techstack?.length ? ` using ${project.techstack.map((item) => item.name).join(", ")}` : ""}.`, project.techstack?.map((item) => `${item.name} integration`) || []];
+  const [, approach, capabilities] = projectNotes[project.title] || fallback;
 
   return (
     <div className="case-study">
       <aside className="case-study-facts">
         <p className="case-study-label">Project details</p>
         <dl>
-          <div><dt>Platform</dt><dd>{project.type}</dd></div>
+          {project.type && <div><dt>Platform</dt><dd>{project.type}</dd></div>}
           <div><dt>Built with</dt><dd>{project.techstack?.map((item) => item.name).join(", ")}</dd></div>
         </dl>
       </aside>
       <div className="case-study-story">
-        <section><p className="case-study-label">The challenge</p><h2>What the project set out to solve</h2><p>{challenge}</p></section>
         <section><p className="case-study-label">The approach</p><h2>How it was built</h2><p>{approach}</p></section>
         <section><p className="case-study-label">Core capabilities</p><h2>What the experience includes</h2><ul className="capability-list">{capabilities.map((item) => <li key={item}>{item}</li>)}</ul></section>
         <section>

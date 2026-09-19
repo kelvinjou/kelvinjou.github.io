@@ -46,7 +46,7 @@ body {
 .project-card-topline { display: flex; align-items: center; justify-content: space-between; }
 .project-badge { display: inline-flex; align-items: center; min-height: 28px; padding: 0 10px; border-radius: 999px; background: #e8f2ff; color: #06c; font-size: .8125rem; font-weight: 650; }
 .dark .project-badge { background: rgba(41,151,255,.16); color: #64b5ff; }
-.project-card-arrow { width: 21px; height: 21px; color: #86868b; }
+.project-card-arrow { width: 21px; height: 21px; margin-left: auto; color: #86868b; }
 .project-card h2 { margin: 18px 0 8px; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.08; letter-spacing: -.035em; }
 .project-card-body > p { min-height: 52px; margin: 0; color: #6e6e73; font-size: 1rem; line-height: 1.45; }
 .dark .project-card-body > p { color: #a1a1a6; }
@@ -131,6 +131,7 @@ body {
 .home-caption { margin: 0; color: var(--home-muted); font-size: .9375rem; line-height: 1.4; }
 .home-intro { max-width: 680px; margin: 18px 0 0; color: var(--home-muted); font-size: clamp(1.2rem, 2vw, 1.55rem); line-height: 1.46; letter-spacing: -.02em; }
 .home-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
+.home-actions .ui-button:hover { transform: none; }
 .home-facts { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--home-border); color: var(--home-muted); font-size: .9375rem; }
 .home-spotlight { position: relative; overflow: hidden; padding: 34px; }
 .home-spotlight::before { content: ""; position: absolute; inset: -40% -30% auto auto; width: 240px; height: 240px; border-radius: 50%; background: radial-gradient(circle, rgba(41,151,255,.28), transparent 68%); pointer-events: none; }
@@ -196,7 +197,7 @@ body {
 .skill-popover ul { display: grid; gap: 5px; margin: 0; padding: 0; list-style: none; }
 .skill-popover li, .skill-popover > span { display: block; font-size: .8125rem; font-weight: 560; line-height: 1.3; }
 .updates-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
-.update-card { padding: 26px; }
+.update-card { padding: 26px; box-shadow: none; }
 .update-card time { color: var(--home-muted); font-size: .8125rem; }
 .update-card h3 { margin: 20px 0 8px; font-size: 1.2rem; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; }
 .update-card p { margin: 0; color: var(--home-muted); font-size: 1rem; line-height: 1.5; }

@@ -3,14 +3,17 @@ import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 
 export default function ProjectCard({ project, priority = false }) {
+  const href = project.directLink ? project.url : `/project/${encodeURIComponent(project.title)}`;
+  const externalLinkProps = project.directLink ? { target: "_blank", rel: "noopener noreferrer" } : {};
+
   return (
-    <Link href={`/project/${encodeURIComponent(project.title)}`} className="project-card" aria-label={`Read the ${project.title} case study`}>
+    <Link href={href} {...externalLinkProps} className="project-card" aria-label={project.directLink ? `View ${project.title}` : `Read the ${project.title} case study`}>
       <div className="project-card-media">
         <Image src={project.imageSrc} alt="" fill priority={priority} sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" className="project-card-image" />
       </div>
       <div className="project-card-body">
         <div className="project-card-topline">
-          <span className="project-badge">{project.type}</span>
+          {project.type && <span className="project-badge">{project.type}</span>}
           <FiArrowUpRight className="project-card-arrow" aria-hidden="true" />
         </div>
         <h2>{project.title}</h2>

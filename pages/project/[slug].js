@@ -17,7 +17,7 @@ export default function ProjectDetails({ project }) {
         <article>
           <header className="detail-hero">
             <div className="detail-heading">
-              <div className="detail-meta"><span className="project-badge">{project.type}</span><span>{project.techstack?.length || 0} technologies</span></div>
+              <div className="detail-meta">{project.type && <span className="project-badge">{project.type}</span>}<span>{project.techstack?.length || 0} technologies</span></div>
               <h1>{project.title}</h1>
               <p>{project.description}</p>
               {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-primary-action">{isGithub ? <FiGithub aria-hidden="true" /> : <FiArrowUpRight aria-hidden="true" />}{isGithub ? "View repository" : "View project"}</a>}

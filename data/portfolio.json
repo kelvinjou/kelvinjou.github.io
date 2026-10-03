@@ -450,7 +450,9 @@
             "width": 1494,
             "height": 1137,
             "url": "/images/Policy_Driven_temporal_Knowledge_Graph_Epistemic_Resolutions.pdf",
-            "directLink": true,
+            "publicationDate": "2026/09/18",
+            "citationTitle": "Policy-Driven Contradiction Resolution for Temporal Knowledge Graphs",
+            "citationAuthors": ["Kelvin Jou"],
             "techstack": []
         }
     ],

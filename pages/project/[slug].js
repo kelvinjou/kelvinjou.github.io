@@ -8,9 +8,18 @@ import data from "../../data/portfolio.json";
 
 export default function ProjectDetails({ project }) {
   const isGithub = project.url?.includes("github.com");
+  const citationPdfUrl = project.url?.startsWith("/") ? `https://www.kelvinjou.com${project.url}` : project.url;
+
   return (
     <>
-      <Head><title>{`${project.title} — Kelvin Jou`}</title><meta name="description" content={project.description} /></Head>
+      <Head>
+        <title>{`${project.title} — Kelvin Jou`}</title>
+        <meta name="description" content={project.description} />
+        {project.publicationDate && <meta name="citation_title" content={project.citationTitle || project.title} />}
+        {project.citationAuthors?.map((author) => <meta key={author} name="citation_author" content={author} />)}
+        {project.publicationDate && <meta name="citation_publication_date" content={project.publicationDate} />}
+        {project.publicationDate && citationPdfUrl && <meta name="citation_pdf_url" content={citationPdfUrl} />}
+      </Head>
       <main className="project-shell project-detail-shell">
         <Header isBlog />
         <div className="detail-back-row"><Link href="/project" className="detail-back"><FiArrowLeft aria-hidden="true" />All projects</Link></div>
